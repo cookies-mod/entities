@@ -1,6 +1,8 @@
 plugins {
     id("java")
     id("maven-publish")
+    `cookies-entities-changelog`
+    `cookies-get-version`
 }
 
 group = "dev.morazzer.cookies"
@@ -13,6 +15,7 @@ repositories {
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
+    implementation("org.jetbrains:annotations:24.1.0")
 }
 
 tasks.test {

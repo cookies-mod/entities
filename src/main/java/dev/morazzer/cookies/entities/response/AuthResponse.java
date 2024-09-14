@@ -1,5 +1,8 @@
 package dev.morazzer.cookies.entities.response;
 
-public record AuthResponse(String token) {
-
-}
+/**
+ * The auth response from the server.
+ *
+ * @param token The token of the client.
+ */
+public record AuthResponse(String token) {}

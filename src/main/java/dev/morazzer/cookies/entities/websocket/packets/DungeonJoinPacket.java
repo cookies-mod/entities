@@ -1,11 +1,13 @@
-package dev.morazzer.cookies.entities.websocket.c2s;
+package dev.morazzer.cookies.entities.websocket.packets;
 
-import dev.morazzer.cookies.entities.websocket.CrossServer;
 import dev.morazzer.cookies.entities.websocket.Packet;
 import dev.morazzer.cookies.entities.websocket.PacketSerializer;
 import java.io.IOException;
 import java.util.UUID;
 
+/**
+ * Informs the backend about a dungeon join.
+ */
 public class DungeonJoinPacket implements Packet<DungeonJoinPacket> {
 
     private final String server;

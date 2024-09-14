@@ -1,12 +1,13 @@
-package dev.morazzer.cookies.entities.websocket.c2s;
+package dev.morazzer.cookies.entities.websocket.packets;
 
-import dev.morazzer.cookies.entities.websocket.CrossServer;
 import dev.morazzer.cookies.entities.websocket.Packet;
 import dev.morazzer.cookies.entities.websocket.PacketSerializer;
-import java.awt.TextArea;
 import java.io.IOException;
 
-public class TestServerPacket implements Packet<TestServerPacket>, CrossServer {
+/**
+ * Test packet to debug api functionality, sending this will cause a disconnect in prod.
+ */
+public class TestServerPacket implements Packet<TestServerPacket> {
 
     public final String text;
 
