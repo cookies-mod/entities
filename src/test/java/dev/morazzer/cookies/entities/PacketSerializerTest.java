@@ -2,6 +2,8 @@ package dev.morazzer.cookies.entities;
 
 import dev.morazzer.cookies.entities.websocket.PacketSerializer;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -55,5 +57,14 @@ public class PacketSerializerTest {
         packetSerializer.writeByteArray(byteArray);
         final PacketSerializer deserializer = new PacketSerializer(packetSerializer.toByteArray());
         Assertions.assertArrayEquals(byteArray, deserializer.readByteArray());
+    }
+
+    @Test
+    public void booleanTest() throws IOException {
+        final PacketSerializer packetSerializer = new PacketSerializer();
+        packetSerializer.writeBoolean(true);
+        final PacketSerializer deserializer = new PacketSerializer(packetSerializer.toByteArray());
+        Assertions.assertTrue(deserializer.readBoolean());
+        deserializer.ensureEmpty();
     }
 }

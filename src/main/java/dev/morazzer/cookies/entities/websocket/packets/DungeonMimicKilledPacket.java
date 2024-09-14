@@ -1,10 +1,12 @@
-package dev.morazzer.cookies.entities.websocket.c2s;
+package dev.morazzer.cookies.entities.websocket.packets;
 
-import dev.morazzer.cookies.entities.websocket.CrossServer;
 import dev.morazzer.cookies.entities.websocket.Packet;
 import dev.morazzer.cookies.entities.websocket.PacketSerializer;
 
-public class DungeonMimicKilledPacket implements Packet<DungeonMimicKilledPacket>, CrossServer {
+/**
+ * Informs about the unaliving of mimic.
+ */
+public class DungeonMimicKilledPacket implements Packet<DungeonMimicKilledPacket> {
 
     public DungeonMimicKilledPacket(PacketSerializer serializer) {
         // EMPTY PACKET

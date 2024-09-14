@@ -1,11 +1,13 @@
-package dev.morazzer.cookies.entities.websocket.c2s;
+package dev.morazzer.cookies.entities.websocket.packets;
 
-import dev.morazzer.cookies.entities.websocket.CrossServer;
 import dev.morazzer.cookies.entities.websocket.Packet;
 import dev.morazzer.cookies.entities.websocket.PacketSerializer;
 import java.io.IOException;
 
-public class DungeonUpdateRoomIdPacket implements Packet<DungeonUpdateRoomIdPacket>, CrossServer {
+/**
+ * Used to sync the map state between clients.
+ */
+public class DungeonUpdateRoomIdPacket implements Packet<DungeonUpdateRoomIdPacket> {
 
     public int roomMapX;
     public int roomMapY;

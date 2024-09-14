@@ -1,11 +1,13 @@
-package dev.morazzer.cookies.entities.websocket.c2s;
+package dev.morazzer.cookies.entities.websocket.packets;
 
-import dev.morazzer.cookies.entities.websocket.CrossServer;
 import dev.morazzer.cookies.entities.websocket.Packet;
 import dev.morazzer.cookies.entities.websocket.PacketSerializer;
 import java.io.IOException;
 
-public class DungeonSyncPlayerLocation implements Packet<DungeonSyncPlayerLocation>, CrossServer {
+/**
+ * Used to sync the location of players between clients.
+ */
+public class DungeonSyncPlayerLocation implements Packet<DungeonSyncPlayerLocation> {
 
     public String username;
     public int x;
