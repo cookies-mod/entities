@@ -22,8 +22,8 @@ jobs:
           chmod +x ./gradlew
       - name: Build
         env:
-          USERNAME: ${{ secrets.USER }}
-          TOKEN: ${{ secrets.TOKEN }}
+          USERNAME: ${{ github.actor }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ./gradlew test build version publish createChangelog
       - name: Get version
         id: version
