@@ -14,7 +14,7 @@ tasks {
                 if (it.size > 1) {
                     it[1].objectId
                 } else {
-                    git.log().call().first().toObjectId()
+                    git.log().call().last().toObjectId()
                 }
             }
 
